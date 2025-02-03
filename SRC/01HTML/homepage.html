@@ -21,6 +21,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 80px;
         }
 
         a {
@@ -146,11 +147,13 @@
             width: 48px;
             height: 48px;
         }
-        .btn-social{
+
+        .btn-social {
             border: none;
             background-color: white;
             border-radius: 50%;
         }
+
     </style>
 
 </head>
@@ -160,29 +163,33 @@
 
     <form action="/test.jsp" method="get" class="mt-5 p-0 m-0">
         <!-- 메인 로고 -->
-        <div class="row">
+        <div class="row main-logo">
             <div class="col">
-                <img src="/logo/mainlogo.png" alt="이미지로고" class="mainlogo">
+                <img src="./logo/mainlogo.png" alt="이미지로고" class="mainlogo img-fluid">
             </div>
         </div>
         <!-- 로그인유지 체크박스 -->
         <div class="cb mb-3">
             <div>
-                <input type="checkbox">
-                <label for="" style="font-size: 14px;">로그인 유지</label>
+                <input type="checkbox" id="login">
+                <!-- 커스텀 체크박스 -->
+                <span class="custom-chk"></span>
+                <label for="login" style="font-size: 14px;">로그인 유지</label>
             </div>
         </div>
         <div class="box1">
             <!-- 이메일 입력 -->
             <div class="row custom-input">
                 <div class="col">
-                    <input type="text" name="userid" class="form-control custom-input" placeholder="이메일 입력" id="userid" required  oninvalid="this.setCustomValidity('이메일을 입력해주세요')">
+                    <input type="text" name="userid" class="form-control custom-input" placeholder="이메일 입력" id="userid"
+                        required oninvalid="this.setCustomValidity('이메일을 입력해주세요')">
                 </div>
             </div>
             <!-- 비밀번호 입력 -->
             <div class="row custom-input">
                 <div class="col">
-                    <input type="password" name="userpw" class="form-control custom-input" placeholder="비밀번호 입력" id="userpw" required oninvalid="this.setCustomValidity('비밀번호를 입력해주세요')">
+                    <input type="password" name="userpw" class="form-control custom-input" placeholder="비밀번호 입력"
+                        id="userpw" required oninvalid="this.setCustomValidity('비밀번호를 입력해주세요')">
                 </div>
             </div>
             <!-- 이메일로 로그인하기 버튼 -->
@@ -202,22 +209,20 @@
             <div class="row">
                 <div class="col">
                     <button class="btn3 btn-custom">
-                        <img src="logo/naver.png" alt="네이버" class="naver">
-                        네이버로 시작하기
-                    </button>
+                        <img src="logo/naver.png" alt="네이버" class="naver">네이버로 시작하기</button>
                     <!-- </div>
             </div> -->
                     <!-- 구글, 페북, 애플 이미지 -->
                     <div class="logos">
                         <!-- <div class="col"> -->
-                            <button type="button" class="btn-social" onclick="location.href='www.google.com'">
-                                <img src="/logo/google.png" alt="구글" class="img-social">
-                            </button>
-                            <button type="button" class="btn-social" onclick="location.href='www.facebook.com'">
-                                <img src="/logo/facebook.png" alt="페북" class="img-social">
-                            </button>
+                        <button type="button" class="btn-social" onclick="location.href='www.google.com'">
+                            <img src="./logo/google.png" alt="구글" class="img-social">
+                        </button>
+                        <button type="button" class="btn-social" onclick="location.href='www.facebook.com'">
+                            <img src="./logo/facebook.png" alt="페북" class="img-social">
+                        </button>
                         <button type="button" class="btn-social" onclick="location.href='www.apple.com'">
-                            <img src="/logo/apple.png" alt="애플" class="img-social">
+                            <img src="./logo/apple.png" alt="애플" class="img-social">
                         </button>
                     </div>
                 </div>

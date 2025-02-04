@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 기본적인 세팅 */
+        * {
+            margin: 0;
+            padding: 0;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* 노토산스 폰트 적용 */
+            min-width: 500px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        ul{
+            align-items: center;
+            list-style: none;
+        }
+        
+        /* 네비 세팅 */
+        .navi {
+            width: 80vw;
+            max-width: 1080px;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .navi > ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .navi ul li {
+            margin: 0 10px;
+            position: relative;
+        }
+        /* 로고 */
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+       .artshub{
+        font-size: 28px;
+        margin-left: 10px;
+       }
+       .img-logo{
+         width: 40px;
+       }
+        /* 1뎁스 2뎁스 */
+        .depth1{
+            position: relative;
+            display: flex;
+            left: 30px;
+            
+        }
+        .depth2{
+            position: absolute;
+            top: 40px;
+            left: 0;
+            padding: 0;
+            display: none;
+            z-index: 100;
+            /* 텍스트를 한줄로 출력 */
+            white-space: nowrap;
+        }
+        .depth2 li a{
+            display: block;
+        }
+        /* 호버 */
+        /* 2뎁스 호버 시 드롭다운 효과 */
+        .navi>.leftside>.depth1>li:hover .depth2{
+            display: block;
+        }
+        .navi>.leftside>.depth1>li>a:hover{  
+            color: blue;
+        }
+        /* 반응형 화면 */
+        /* 사용할 아이콘 */
+        .drop-icon {
+            display: none;
+            font-size: 20px;
+            font-weight: bold;
+            color: blue;
+            position: fixed;
+            right: 60px;
+        }
+        .drop-icon:hover{
+
+        }
+        /* 1100 이하일때 로그인창 없앰 */
+        @media(max-width: 1100px){
+            .navi{
+                justify-content: center;
+            }
+            .rightside li{
+                display: none;
+            }
+            .leftside{
+               
+            }
+            .leftside li{
+                width: 150%;
+                font-size: 20px;
+            }
+            .img-logo{
+                width: 60px;
+            }
+            .artshub{
+                font-size: 40px
+            }
+            .drop-icon {
+                display: block;
+            }
+        }
+        /* 800 이하일때 메뉴창도 없앰 */
+        @media(max-width: 800px){
+            .depth1{
+                display: none;
+            }
+            .artshub{
+                font-size: 55px
+            }
+            .img-logo{
+                width: 80px;
+            }
+            .drop-icon{
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navi">
+            <ul class="leftside">
+                <li class="logo">
+                    <img class="img-logo" src="../01HTML/logo/mainlogo.png"alt="">
+                    <span class="artshub">Arts hub</span>
+                </li>
+                <ul class="depth1">
+                    <li><a href="javascript:void(0)">Funding</a>
+                        <ul class="depth2">
+                            <li><a href="javascript:void(0)">인기</a></li>
+                            <li><a href="javascript:void(0)">신규</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)">Community</a>
+                        <ul class="depth2">
+                            <li><a href="javascript:void(0)">공연 후기</a></li>
+                            <li><a href="javascript:void(0)">작품 이야기</a></li>
+                            <li><a href="javascript:void(0)">자유 게시판</a></li>
+                            <li><a href="javascript:void(0)">정보 공유</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)">Project</a>
+                        <ul class="depth2">
+                            <li><a href="javascript:void(0)">참가하기</a></li>
+                            <li><a href="javascript:void(0)">모집하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </ul>
+            <ul class="rightside">
+                <li><a href="javascript:void(0)">로그인</a></li>
+                <li><a href="javascript:void(0)">회원가입</a></li>
+                <li><a href="javascript:void(0)">프로젝트 만들기</a></li>
+            </ul>
+            <div class="drop-icon" >⋯</div>
+        </nav>
+    </header>
+    
+</body>
+
+</html>

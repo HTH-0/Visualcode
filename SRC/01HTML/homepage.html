@@ -17,11 +17,11 @@
     <style>
         body {
             margin: 0;
-            height: 100vh;
+            height: auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 80px;
+            margin-top: 40px;
         }
 
         a {
@@ -29,13 +29,13 @@
             color: rgba(0, 0, 0, 0.663);
             font-size: 14px;
             padding: 0 10px;
-            margin-top: 50px;
-            margin-bottom: 50px;
+            
         }
 
         .mainlogo {
             display: flex;
             margin: 40px auto;
+            margin-top: 0px;
             width: 150px;
             height: 180px;
         }
@@ -113,6 +113,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
 
         .hypertext a:not(:last-child) {
@@ -146,6 +148,11 @@
         .img-social {
             width: 48px;
             height: 48px;
+            border-radius: 50%;
+        }
+
+        .img-social:hover {
+            filter: brightness(0.8);
         }
 
         .btn-social {
@@ -154,6 +161,26 @@
             border-radius: 50%;
         }
 
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 56px;
+            display: none;
+            z-index: 1000; 
+           }
+        @media (max-width: 1000px) {
+            .header {
+                display: flex;
+            }
+        }
+        .header-icon{
+            display: flex;
+            justify-content: space-between;
+            transition: 0.3s ease;
+        }
     </style>
 
 </head>
@@ -162,6 +189,19 @@
 
 
     <form action="/test.jsp" method="get" class="mt-5 p-0 m-0">
+
+        <div class="row header">
+            <header></header>
+            <div class="col header-icon">
+                <a href="">
+                    <img src="../01HTML/images/back.svg" style="width: 24px; " alt="back">
+                </a>
+                <a href="">
+                    <img src="../01HTML/images/home.svg" style="width: 24px; " alt="home">
+                </a>
+                
+            </div>
+        </div>
         <!-- 메인 로고 -->
         <div class="row main-logo">
             <div class="col">

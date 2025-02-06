@@ -25,9 +25,11 @@
         body {
             margin: 0;
         }
-        h3{
+
+        h3 {
             margin: 10px;
         }
+
         /* layout */
         .wrapper {}
 
@@ -49,6 +51,8 @@
             display: flex;
             justify-content: space-between;
         }
+
+
         .wrapper>header>nav>div {
             font-size: 1.5rem;
             display: flex;
@@ -56,13 +60,14 @@
             justify-content: center;
             padding: 30px;
         }
+
         .wrapper>header>nav>ul {
             font-size: 1.3rem;
             display: flex;
             flex-wrap: wrap;
             margin-right: 10px;
         }
-       
+
         .wrapper>header>nav>ul>li {
             margin-left: 10px;
             display: flex;
@@ -71,14 +76,14 @@
         }
 
         /* main  */
-        .wrapper>main {
-        }
+        .wrapper>main {}
 
         .wrapper>main>section {
             display: block;
             margin: 10px;
         }
-        .wrapper>main>section>div{
+
+        .wrapper>main>section>div {
             display: flex;
             flex-wrap: wrap;
             font-size: 12px;
@@ -86,42 +91,50 @@
             text-align: center;
             justify-content: start;
         }
+
         /* 카드 */
-        .wrapper>main>section>div>.card{
+        .wrapper>main>section>div>.card {
             margin: 5px;
             height: 80px;
             box-shadow: 2px 2px 5px lightgrey;
             border-radius: 10px;
         }
-        .card-container{
+
+        .card-container {
             padding: 5px;
             border: 1px solid lightgray;
             border-radius: 10px;
         }
-        .wrapper>main>section>div>.card>h3{
+
+        .wrapper>main>section>div>.card>h3 {
             white-space: nowrap;
             text-align: center;
             justify-content: center;
             margin-top: 5px;
         }
-        .wrapper>main>section>div>.card:nth-child(1){
-            flex-basis: 300px;
+
+        .wrapper>main>section>div>.card:nth-child(1) {
+            flex-basis: 400px;
         }
-        .wrapper>main>section>div>.card:nth-child(2){
-            flex-basis: 300px;
+
+        .wrapper>main>section>div>.card:nth-child(2) {
+            flex-basis: 400px;
         }
-        .wrapper>main>section>div>.card:nth-child(3){
-            flex-basis: 300px;
+
+        .wrapper>main>section>div>.card:nth-child(3) {
+            flex-basis: 400px;
         }
+
         /* 미디어 */
-        .wrapper>main>section>.container{
+        .wrapper>main>section>.container {
             display: flex;
             border: 1px solid lightgray;
             border-radius: 10px;
         }
-        .wrapper>main>section>.container:nth-child(1){
-        }
-        .wrapper>main>section>div>.media-item{
+
+        .wrapper>main>section>.container:nth-child(1) {}
+
+        .wrapper>main>section>div>.media-item {
             display: flex;
             justify-content: left;
             gap: 20px;
@@ -129,27 +142,48 @@
             width: 100%;
             text-align: left;
         }
-        .media-img{
+
+        .media-img {
             height: 150px;
             width: 200px;
             min-width: 200px;
             background-color: lightgray;
         }
-        .wrapper>main>section>div>.media-item>.media-contents{
-            border: 1px solid ;
+
+        .wrapper>main>section>div>.media-item>.media-contents {
+            border: 1px solid;
             justify-content: left;
         }
-        @media(max-width:700px){
-            .wrapper>main>section>div>.media-item{
+
+        @media(max-width:700px) {
+            .wrapper>main>section>div>.media-item {
                 display: block;
             }
-            .media-img{
+
+            .media-img {
                 width: 80vw;
                 height: calc(50vh - 40vw);
             }
         }
+
+        @media(max-width:600px) {
+            .wrapper>header>nav {
+                display: block;
+                justify-content: center;
+                height: auto;
+            }
+            .nav-menu{
+                display: block;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column
+            }
+            .nav-menu>li{
+                margin-bottom: 10px;
+            }
+        }
         /* footer */
-        .footer{
+        .footer {
             display: block;
             border: 1px solid lightgray;
             margin: 10px;
@@ -158,10 +192,12 @@
             justify-content: space-between;
             background-color: rgba(0, 0, 0, 0.719);
         }
+
         .footer>div {
             align-items: center;
             color: white;
         }
+
         .wrapper>footer>div>p {
             font-size: 14px;
         }
@@ -175,7 +211,7 @@
             <div class="top-header">
                 <h3>1. 네비게이션 바 레이아웃</h3>
             </div>
-            <nav>
+            <nav class="navi">
                 <div class="nav-logo">Logo</div>
                 <ul class="nav-menu">
                     <li>Home</li>

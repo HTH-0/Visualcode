@@ -1,0 +1,94 @@
+/* 구글 아이콘 세팅 */
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 200,
+        'GRAD' 0,
+        'opsz' 40
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+
+}
+
+/* ----------최상단 슬라이드 네비----------- */
+main>.nav1 {
+    border: 1px solid yellow;
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: calc(200vw);;
+    transition: 0.5s;
+    position: relative;
+    border: 5px solid blue;
+    /* animation: slide-nav1 60s infinite; */
+}
+
+main>.nav1>.slider .nav1-contents {
+    border: 1px solid red;
+    padding: 10px;
+    width: calc(100vw / 3);
+    height: calc(100vw / 6);
+    overflow: hidden;
+    display: flex;
+    flex-shrink: 0;
+    border-radius: 20px;
+}
+
+main>.nav1 .nav1-contents a {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+main>.nav1 .nav1-contents a img {
+    width: 100%;
+    align-items: center;
+
+}
+
+.controls label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid;
+    cursor: pointer;
+    z-index: 100;
+}
+.controls .prev{
+    left: 0;
+}
+.controls .next{
+    right: 0px;
+}
+
+/* 
+@keyframes slide-nav1 {
+    0% { transform: translateX(0); }
+    16.66% { transform: translateX(-33.33vw); }
+    33.33% { transform: translateX(-66.66vw); }
+    50% { transform: translateX(-100vw); }
+    66.66% { transform: translateX(-133.33vw); }
+    83.33% { transform: translateX(-166.66vw); }
+    100% { transform: translateX(0); }
+}
+.slider:hover{
+    animation-play-state: paused;
+} */

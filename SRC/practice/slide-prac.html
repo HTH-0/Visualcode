@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 슬라이드</title>
+    <style>
+        /* 전체 슬라이드 컨테이너 */
+        .slider {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 슬라이드 항목 */
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        /* 각 슬라이드 */
+        .slide {
+            width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+        }
+
+        /* 라디오 버튼 숨기기 */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* 각 슬라이드 버튼(label) 스타일 */
+        .navigation label {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1.5em;
+        }
+
+        .navigation label.prev {
+            left: 10px;
+        }
+
+        .navigation label.next {
+            right: 10px;
+        }
+
+        /* 각 슬라이드를 이동시키기 위한 체크 상태 */
+        #slide1:checked ~ .slider .slides {
+            transform: translateX(0);
+        }
+
+        #slide2:checked ~ .slider .slides {
+            transform: translateX(-100%);
+        }
+
+        #slide3:checked ~ .slider .slides {
+            transform: translateX(-200%);
+        }
+
+        #slide4:checked ~ .slider .slides {
+            transform: translateX(-300%);
+        }
+
+        #slide5:checked ~ .slider .slides {
+            transform: translateX(-400%);
+        }
+
+        #slide6:checked ~ .slider .slides {
+            transform: translateX(-500%);
+        }
+
+        /* 네비게이션 */
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">슬라이드 1</div>
+            <div class="slide">슬라이드 2</div>
+            <div class="slide">슬라이드 3</div>
+            <div class="slide">슬라이드 4</div>
+            <div class="slide">슬라이드 5</div>
+            <div class="slide">슬라이드 6</div>
+        </div>
+
+        <!-- 라디오 버튼 -->
+        <input type="radio" id="slide1" name="slider" checked>
+        <input type="radio" id="slide2" name="slider">
+        <input type="radio" id="slide3" name="slider">
+        <input type="radio" id="slide4" name="slider">
+        <input type="radio" id="slide5" name="slider">
+        <input type="radio" id="slide6" name="slider">
+
+        <!-- 네비게이션 버튼 -->
+        <div class="navigation">
+            <label for="slide1" class="prev">◁</label>
+            <label for="slide2" class="next">▷</label>
+        </div>
+    </div>
+
+</body>
+</html>

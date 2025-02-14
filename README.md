@@ -1,3 +1,2 @@
 # VSCODE 연습
-
-html,css,js 연습
+HTML, CSS, JS 연습
